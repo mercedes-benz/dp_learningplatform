@@ -1,0 +1,72 @@
+@import "./theme/globals";
+
+:local(.Login) {
+  @include min(xl) {
+    min-height: calc(100vh - 162px);
+  }
+  .error, .warning {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 30px auto;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .warning {
+    background-color: #feffbe;
+    border-color: #fff4a7;
+  }
+
+  .error {
+    background-color: #ff0c00;
+    border-color: #ff0c00;
+    color: #fff;
+  }
+
+  .text_column {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+:local(.Logo) {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  img {
+    display: inline-block;
+    margin: 0 auto;
+    width: 65px;
+    height: auto;
+  }
+}
+
+:local(.Content) {
+  margin-bottom: 20px;
+}
+
+:local(.Form) {
+  @include max($width-sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+:local(.Footer) {
+  composes: Footer from "../../components/Footer/styles.css";
+  .footer-simplicity {
+    p {
+      @include font-size(14);
+    }
+  }
+}

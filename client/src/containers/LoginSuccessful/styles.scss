@@ -1,0 +1,15 @@
+:local(.LoginSuccessful) {}
+
+  :local(.Content) {
+    margin-bottom: 20px;
+  }
+
+  :local(.LoggedIn) {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .welcome {
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+  }

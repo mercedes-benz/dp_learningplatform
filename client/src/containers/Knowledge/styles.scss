@@ -1,0 +1,454 @@
+@import "./theme/globals";
+.color-primary {
+  @include gradient-primary();
+}
+.color-primary-ext {
+  background: $color-primary-light;
+}
+
+:local(.IntroBlock) {
+  @include gradient-primary();
+  > .container-default > .row {
+    align-items: center;
+  }
+  .col-left {
+  }
+  .col-right {
+  }
+  .wp-content {
+    .row {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .text_column {
+      text-align: left;
+      color: #fff;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100%;
+      h1,h2,h3 {
+        color: #fff;
+        text-align: left;
+
+        @include max(767px) {
+          text-align: center;
+        }
+      }
+      p {
+        @include max(767px) {
+          text-align: center;
+        }
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .image-holder {
+    @include max(767px) {
+      display: none;
+    }
+  }
+}
+
+:local(.FilterBar) {
+  background: #fff;
+  .row {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .sort-filter, .status-filter {
+    position: relative;
+    @include flex(0,1,100%);
+    @include min(sm) {
+      @include flexbox;
+      align-items: center;
+    }
+    .filter-wrap {
+      position: relative;
+
+      @include max(767px) {
+        margin-bottom: 10px;
+      }
+    }
+    div.filter {
+      width: 100%;
+      left: 0;
+    }
+    .title {
+      position: relative;
+      margin-bottom: 0;
+      line-height: 30px;
+      font-family: $headline;
+      @include font-size(14);
+      @include min(sm) {
+        @include flex(1,0,auto);
+        margin-right: 10px;
+      }
+      @include max(767px) {
+        padding: 10px;
+        border-radius: 3px;
+        @include font-size(16);
+        text-transform: uppercase;
+        font-family: $headline;
+        background: #fff;
+        display: none;
+      }
+    }
+    span.placeholder {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 13px 10px;
+      line-height: 1;
+      @include font-size(16);
+      background: $color-background;
+      cursor: pointer;
+      opacity: $itemsOpacity;
+      box-shadow: inset 0 -1px 0 0 $color-black;
+      @include transition(box-shadow $speed);
+      &:hover {
+        box-shadow: inset 0 -3px 0 0 #000;
+      }
+      &.is-active {
+        box-shadow: inset 0 0 0 0 #000;
+        &:before {
+          @include rotate(180);
+        }
+      }
+      &:before {
+        display: block;
+        @include font-size(12);
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -6px;
+        will-change: transform;
+        @include transition(transform $speed);
+      }
+    }
+    .filter {
+      padding: 5px 15px;
+      background: #e6e6e6;
+      position: absolute;
+      top: 100%;
+      z-index: 10;
+      border-bottom: 3px solid #000;
+      @include transition(opacity $speed 0.2s, height $speed);
+      &:not(.is-open) {
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+      }
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        @include font-size(16);
+        font-family: $text;
+        line-height: 1;
+        text-align: left;
+        cursor: pointer;
+        opacity: $itemsOpacity;
+        @include transition(opacity $speed);
+        &:hover {
+          opacity: 1;
+          font-family: $headline;
+        }
+        &.filterung {
+          display: none;
+        }
+      }
+    }
+  }
+  .sort-filter {
+    margin-right: auto;
+    .filter-wrap {
+      @include min(sm) {
+        @include flex(0,1,270px);
+        width: 270px;
+      }
+    }
+  }
+  .bookmarks {
+    flex-basis: auto;
+    max-width: auto;
+    width: auto;
+    a {
+      @include flexbox;
+      align-items: center;
+      &:hover {
+        span {
+          color: $color-primary;
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      i {
+        @include font-size(24);
+        margin-right: 10px;
+      }
+      span {
+        position: relative;
+        @include font-size(14);
+        @include transition(color $speed);
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 1px;
+          background: $color-primary;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include transition(width $speed);
+        }
+      }
+    }
+  }
+  .status-filter {
+    @include min(lg) {
+      @include flex(0,1,auto);
+      width: auto;
+    }
+    .filter-wrap {
+      @include min(sm) {
+        @include flex(0,1,200px);
+        width: 200px;
+      }
+    }
+  }
+  .status-info {
+    flex-basis: auto;
+    max-width: auto;
+    width: auto;
+
+    @include max(767px) {
+      width: 100%;
+    }
+
+    ul {
+      @include flexbox;
+      align-items: center;
+      margin-bottom: 0;
+
+      @include max(767px) {
+        justify-content: center;
+      }
+    }
+    li {
+      @include flexbox;
+      align-items: center;
+      flex-wrap: wrap;
+      ~ li {
+        margin-left: 20px;
+      }
+      i {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      &.closed i {
+        background: $closed;
+      }
+      &.available i {
+        background: $available;
+      }
+      &.wip i {
+        background: $wip;
+      }
+      &.done i {
+        background: $done;
+      }
+    }
+
+  }
+  &.is-available {
+    .progress-info {
+      .progress i {
+        background: $available;
+      }
+      .status span {
+        background: $available;
+      }
+    }
+  }
+  &.done {
+    .progress-info {
+      .progress i {
+        background: $done;
+      }
+      .status span {
+        background: $done;
+      }
+    }
+  }
+  &.in-progress {
+    .progress-info {
+      .progress i {
+        background: $wip;
+      }
+      .status span {
+        background: $wip;
+      }
+    }
+  }
+  .progress-info {
+    @include flexbox;
+    align-items: center;
+    .progress {
+      padding-right: 20px;
+      @include min(lg) {
+        padding-right: 30px;
+      }
+      p {
+        margin-bottom: 0;
+        @include flexbox;
+        align-items: center;
+      }
+      i {
+        display: block;
+        width: 26px;
+        height: 26px;
+        color: #fff;
+        @include font-size(16);
+        line-height: 28px;
+        text-align: center;
+        border-radius: 50%;
+        background: $wip;
+        margin-right: 10px;
+      }
+    }
+    .status {
+      position: relative;
+      width: 160px;
+      height: 22px;
+      line-height: 22px;
+      color: #fff;
+      background: #e6e6e6;
+      span {
+        display: block;
+        height: 100%;
+        text-indent: 5px;
+      }
+    }
+  }
+}
+
+:local(.FilterTags) {
+  .inner {
+    background: #fff;
+  }
+  .title {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1;
+    border-bottom: 1px solid $color-border;
+    font-weight: $heavy;
+  }
+  .last {
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    background: $color-border;
+  }
+  ul {
+    padding: 15px 30px 30px;
+    @include flexbox;
+    flex-wrap: wrap;
+    @include max(991px) {
+      padding: 15px 15px 0;
+    }
+    li.title {
+      width: 100%;
+    }
+    .tag {
+      @include flexbox;
+      align-items: center;
+      @include font-size(14);
+      border: 1px solid $closed;
+      border-radius: 5px;
+      color: $closed;
+      line-height: 1;
+      padding: 6px 5px 4px;
+      margin-right: 10px;
+      margin-left: 0;
+      margin-bottom: 10px;
+      max-width: none;
+      width: auto;
+      cursor: pointer;
+      pointer-events: none;
+      @include transition(color $speed);
+      &.active {
+        i.icon {
+          display: block;
+        }
+      }
+    }
+    i.icon {
+      display: none;
+      width: 10px;
+      height: 10px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      line-height: 10px;
+      margin-right: 5px;
+      @include font-size(11);
+    }
+    span {
+      pointer-events: none;
+    }
+  }
+}
+
+:local(.Overview) {
+  .content-block {
+    @include flexbox;
+    flex-wrap: wrap;
+    .content-holder {
+      @include min(sm) {
+        padding-right: 30px;
+        width: calc(100% - 250px);
+      }
+    }
+    h1, h2, h3, h4 {
+      text-align: left;
+    }
+    ul {
+      padding-left: 25px;
+      li {
+        position: relative;
+        padding: 7px 0;
+        border-bottom: 1px solid $color-border;
+        &:before {
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          position: absolute;
+          top: 16px;
+          left: -25px;
+          background: $color-primary;
+        }
+      }
+    }
+    .image-holder {
+      width: 100%;
+      @include min(sm) {
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+:local(.Error) {
+  background-color: #d00;
+  color: #fff;
+  padding: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+}

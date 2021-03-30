@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className="container-default"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-12"
+      >
+        <h1>
+          Categories
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;

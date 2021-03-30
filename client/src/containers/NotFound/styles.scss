@@ -1,0 +1,15 @@
+@import "./theme/globals";
+
+:local(.Content) {
+  @include padding(top);
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  em {
+    background-color: $color-grey-light;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-style: normal;
+    color: lighten($color-grey, 35%);
+  }
+}

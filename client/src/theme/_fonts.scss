@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "DaimlerCS-Regular";
+  src: url("../../assets/fonts/DaimlerCS-Regular.eot");
+  src: url("../../assets/fonts/DaimlerCS-Regular.eot?#iefix")
+    format("embedded-opentype"),
+    url("../../assets/fonts/DaimlerCS-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/DaimlerCS-Regular.woff") format("woff"),
+    url("../../assets/fonts/DaimlerCS-Regular.ttf") format("truetype"),
+    url("../../assets/fonts/DaimlerCS-Regular.svg#DaimlerCS-Regular")
+    format("svg");
+}
+@font-face {
+  font-family: "DaimlerCS-Bold";
+  src: url("../../assets/fonts/DaimlerCS-Bold.eot");
+  src: url("../../assets/fonts/DaimlerCS-Bold.eot?#iefix")
+    format("embedded-opentype"),
+    url("../../assets/fonts/DaimlerCS-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/DaimlerCS-Bold.woff") format("woff"),
+    url("../../assets/fonts/DaimlerCS-Bold.ttf") format("truetype"),
+    url("../../assets/fonts/DaimlerCS-Bold.svg#DaimlerCS-Bold")
+    format("svg");
+}
+
+@font-face {
+  font-family: "Center-Demi";
+  src: url("../../assets/fonts/380085_0_0.eot");
+  src: url("../../assets/fonts/380085_0_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/380085_0_0.woff2") format("woff2"),
+    url("../../assets/fonts/380085_0_0.woff") format("woff"),
+    url("../../assets/fonts/380085_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Center-Bold";
+  src: url("../../assets/fonts/37193A_0_0.eot");
+  src: url("../../assets/fonts/37193A_0_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/37193A_0_0.woff2") format("woff2"),
+    url("../../assets/fonts/37193A_0_0.woff") format("woff"),
+    url("../../assets/fonts/37193A_0_0.ttf") format("truetype");
+}
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../assets/fonts/source-sans-pro-v11-latin-300.eot"); /* IE9 Compat Modes */
+  src: local("Source Sans Pro Light"), local("SourceSansPro-Light"),
+    url("../../assets/fonts/source-sans-pro-v11-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../assets/fonts/source-sans-pro-v11-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../assets/fonts/source-sans-pro-v11-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../assets/fonts/source-sans-pro-v11-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../assets/fonts/source-sans-pro-v11-latin-300.svg#SourceSansPro")
+      format("svg"); /* Legacy iOS */
+}
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/source-sans-pro-v11-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"),
+    url("../../assets/fonts/source-sans-pro-v11-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../../assets/fonts/source-sans-pro-v11-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../assets/fonts/source-sans-pro-v11-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../assets/fonts/source-sans-pro-v11-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../assets/fonts/source-sans-pro-v11-latin-regular.svg#SourceSansPro")
+      format("svg"); /* Legacy iOS */
+}
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/source-sans-pro-v11-latin-700.eot"); /* IE9 Compat Modes */
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"),
+    url("../../assets/fonts/source-sans-pro-v11-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../assets/fonts/source-sans-pro-v11-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../assets/fonts/source-sans-pro-v11-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../assets/fonts/source-sans-pro-v11-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../assets/fonts/source-sans-pro-v11-latin-700.svg#SourceSansPro")
+      format("svg"); /* Legacy iOS */
+}

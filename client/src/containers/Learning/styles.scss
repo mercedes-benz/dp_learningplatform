@@ -1,0 +1,294 @@
+@import "./theme/globals";
+.color-secondary {
+  @include gradient-secondary();
+}
+.color-secondary-ext {
+  background: $color-secondary-light;
+}
+
+:local(.IntroBlock) {
+  composes: IntroBlock from "../Knowledge/styles.css";
+  @include gradient-secondary();
+}
+
+:local(.FilterBar) {
+  composes: FilterBar from "../Knowledge/styles.css";
+
+  @include max(1024px) {
+    .status-filter .title {
+      flex: 0 0 auto;
+    }
+
+    .col-lg-4 {
+      min-width: auto;
+      width: auto;
+      max-width: max-content;
+    }
+
+    .status-info {
+      li ~ li {
+        margin-left: 15px;
+      }
+    }
+
+    .sort-filter {
+      .filter-wrap {
+        width: 240px;
+      }
+    }
+  }
+
+  @include max(767px) {
+    .col-lg-4 {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .sort-filter {
+      .filter-wrap {
+        width: 100%;
+      }
+    }
+  }
+
+  .filter button:hover {
+    color: $color-secondary;
+  }
+
+  .sort-filter {
+    @include min(lg) {
+      @include flex(0,1,auto);
+      width: auto;
+      margin-right: 0;
+    }
+  }
+
+  .status-info {
+    @include min(sm) {
+      margin-top: 15px;
+    }
+
+    @include min(md) {
+      margin-top: 0;
+    }
+  }
+}
+
+:local(.Topics) {
+}
+
+:local(.Topic) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include min(lg) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &.in-progress .teaser:before {background-color: $wip;}
+  &.done .teaser:before {background-color: $done;}
+
+  .teaser {
+    position: relative;
+    height: 100%;
+    background: #fff;
+    @include transition(box-shadow $speed);
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $barHeight;
+      background: $available;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 15px 0 rgba(0,0,0,.35);
+      .button a {
+        opacity: .75;
+        // &:before {
+        //   opacity: 0;
+        // }
+      }
+      .headline {
+        color: $color-secondary;
+      }
+    }
+    .teaser-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .image-holder {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 150px;
+
+      img {
+        opacity: 0;
+        visibility: hidden;
+        @include min(sm) {
+          display: none;
+        }
+      }
+    }
+    .content-holder {
+      position: relative;
+      background-color: #fff;
+      padding: 25px 30px 0;
+
+      @include max(767px) {
+        padding: 15px 10px;
+      }
+
+      .inner {
+        border-bottom: 1px solid $color-border;
+      }
+      .headline {
+        text-align: left;
+        margin-bottom: 15px;
+        @include transition(color $speed);
+        @include min(lg) {
+          min-height: 62px;
+        }
+      }
+      .description {
+        margin-bottom: 25px;
+        @include min(lg) {
+          min-height: 72px;
+        }
+      }
+      .button {
+        margin-bottom: 20px;
+      }
+    }
+    .info-holder {
+      position: relative;
+      z-index: 1;
+      @include flexbox;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      line-height: 1;
+      background: #fff;
+
+      @include max(767px) {
+        padding: 0 10px 15px;
+      }
+
+      .info {
+        @include flexbox;
+        align-items: center;
+        i {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          text-align: center;
+          @include font-size(25);
+          background: $available;
+          margin-right: 10px;
+
+          &.done {background-color: $done;}
+          &.in-progress {background-color: $wip;}
+
+          &:before {
+            position: relative;
+            top: -1px;
+            left: 1px;
+          }
+        }
+        .count {
+          font-weight: $heavy;
+          margin-right: 5px;
+        }
+      }
+      .certificate {
+        margin: 0 15px;
+        a {
+          @include flexbox;
+          align-items: center;
+          cursor: pointer;
+          &:hover {
+            span.title {
+              color: $color-secondary;
+              &:after {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .icon-block {
+          display: block;
+          height: 25px;
+          line-height: 1;
+        }
+        span {
+          pointer-events: none;
+        }
+        i {
+          position: relative;
+          top: -4px;
+          @include font-size(29);
+        }
+        span.title {
+          position: relative;
+          font-size: 14px;
+          font-size: 0.875rem;
+          @include transition(color $speed);
+          @include hover-border(0);
+          &:after {
+            background: $color-secondary;
+          }
+        }
+      }
+      .status {
+        position: relative;
+        width: 170px;
+        height: 22px;
+        line-height: 22px;
+        color: #fff;
+        background: #e6e6e6;
+
+        @include max(1023px) {
+          width: 150px;
+        }
+
+        .inner {
+          position: relative;
+          display: block;
+          height: 100%;
+          padding: 0;
+
+          &.in-progress {background-color: $wip;}
+          &.done {background-color: $done;}
+        }
+          .percent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 5px;
+
+            @include max(767px) {
+              font-weight: bold;
+            }
+          }
+      }
+    }
+  }
+}
+
+:local(.Error) {
+  background-color: #d00;
+  color: #fff;
+  padding: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+}

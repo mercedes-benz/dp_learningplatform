@@ -1,0 +1,43 @@
+@import "./theme/globals";
+
+:local(.ScrollTo) {
+  position: relative;
+  display: block;
+  text-align: center;
+  &.icon-arrow-up {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    border: 2px solid #fff;
+    background: $color-black;
+    color: #fff;
+    float: right;
+    @include transition(background $speed, color $speed);
+    &:hover {
+      background: #fff;
+      color: $color-black;
+    }
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -5px 0 0 -5px;
+      display: block;
+      @include font-size(10);
+    }
+  }
+  &.icon-scrolldown-thin {
+    width: auto;
+    height: auto;
+    color: $color-text;
+    &:before {
+      @include font-size(60);
+    }
+  }
+  &:before {
+    display: block;
+  }
+}

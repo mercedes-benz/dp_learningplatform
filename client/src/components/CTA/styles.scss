@@ -1,0 +1,66 @@
+@import "./theme/globals";
+
+:local(.CTA) {
+  position: relative;
+  @include padding(top, true);
+  @include padding(bottom, true);
+  text-align: center;
+  background-color: $color-grey-light;
+  .decor-cta {
+    width: 180px;
+    position: absolute;
+    bottom: -40px;
+    left: -100px;
+    @include min(sm) {
+      width: 220px;
+      bottom: -50px;
+    }
+    @include min(md) {
+      left: 0;
+    }
+    @include min(lg) {
+      width: 320px;
+      bottom: -60px;
+    }
+  }
+  .title {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 420px;
+    @include max(767px) {
+      padding-left: 8.33%;
+      padding-right: 8.33%;
+    }
+  }
+  ul {
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    @include max(767px) {
+      flex-direction: column;
+    }
+  }
+  li {
+    margin: 0 15px;
+    &:first-child {
+      @include max(767px) {
+        margin-bottom: 10px;
+      }
+    }
+    a {
+      @include flexbox;
+      align-items: center;
+      &:hover {
+      }
+      i {
+        top: 1px;
+        order: -1;
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}

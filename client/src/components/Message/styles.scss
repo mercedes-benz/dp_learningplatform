@@ -1,0 +1,39 @@
+:local(.Box) {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 1rem;
+  text-align: center;
+  margin: 30px auto;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+  :local(.Warning) {
+    background-color: #feffbe;
+    border-color: #fff4a7;
+  }
+
+  :local(.Error) {
+    background-color: #ff0c00;
+    border-color: #ff0c00;
+    color: #fff;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  :local(.Success) {
+    background-color: #c3ffca;
+    border-color: #49de5b;
+  }
+
+  :local(.Info) {
+    background-color: #c3f1ff;
+    border-color: #9bd5e6;
+  }

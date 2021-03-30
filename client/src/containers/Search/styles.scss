@@ -1,0 +1,272 @@
+@import "./theme/globals";
+
+:local(.Container) {
+  margin: 50px auto;
+}
+
+:local(.Form) {
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+
+  .input {
+    width: 100%;
+    // padding: 20px;
+    font-size: inherit;
+    font-family: inherit;
+    background: #fff;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .submit {
+  }
+}
+
+:local(.LoadMoreButton) {
+  display: flex;
+  display: none;
+  margin-top: 30px;
+  width: 100%;
+
+  button {
+    margin: 0 auto;
+  }
+
+  &.fetching {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+:local(.PostsFound) {
+  margin: 20px auto 50px;
+}
+
+:local(.Results) {
+  overflow: hidden;
+  composes: Articles from "../KnowledgeArticles/styles.css";
+  .teaser-bottom {}
+  .meta-info {
+    &.info-bottom {
+      justify-content: flex-start;
+      .date {
+        display: none;
+      }
+    }
+  }
+}
+
+:local(.ResultsRow) {
+  // width: 1000px;
+  margin: 0 auto;
+
+  h3 {
+    width: 100%;
+  }
+  .counter {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+:local(.ResultsWrapper) {
+  width: 100%;
+  margin: 0 auto 30px;
+  @include flexbox;
+  flex-wrap: wrap;
+  .pagina-block {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    width: 100%;
+    &:after {
+      content: '';
+      display: block;
+      width: calc(100% - 30px);
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      background: $color-black;
+    }
+    .inner {
+      position: relative;
+      width: 100%;
+      @include flexbox;
+      align-items: center;
+    }
+    .counter {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include transformY(-50%);
+      width: auto;
+      padding-left: 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    ul.pagination {
+      @include flexbox;
+      align-items: center;
+      justify-content: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 0;
+      width: 100%;
+      li {
+        margin: 0 7px;
+        @include font-size(15);
+        line-height: 1;
+        cursor: pointer;
+        a {
+          display: block;
+          padding: 4px 6px;
+          color: $color-black;
+          @include transition(color $speed, background $speed);
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+        &.active, &:hover {
+          a {
+            background: $color-black;
+            color: #fff;
+          }
+        }
+        &.active {
+          a {
+            font-weight: $heavy;
+          }
+        }
+      }
+      .previous, .next {
+        @include font-size(13);
+        &.disabled {
+          pointer-events: none;
+          opacity: .5;
+        }
+        i {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+
+:local(.Result) {
+  composes: Post from "../KnowledgeArticles/styles.css";
+
+  .teaser.learning {
+    &:before {
+      @include gradient-secondary();
+    }
+    .meta-info {
+      .time:before, .date:before {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .excerpt {
+    strong {
+      padding: 0 5px;
+      font-weight: $regular;
+      background-color: $color-secondary;
+      color: #fff;
+    }
+  }
+}
+
+:local(.ResultsOthers) {
+  margin-bottom: 50px;
+  display: none;
+  .otherbox {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    .inner {
+      background: #fff;
+      @include flexbox;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 15px 20px;
+      @include transition(box-shadow $speed);
+      @include min(sm) {
+        padding: 0 25px 0 5px;
+      }
+      @include min(md) {
+        padding: 0 30px 0 5px;
+      }
+      @include min(lg) {
+        padding: 0 50px 0 20px;
+      }
+      @include max(767px) {
+        flex-direction: column;
+      }
+      &:hover {
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.35);
+      }
+    }
+    i.icon-tip {
+      margin-right: 0;
+      line-height: 1;
+      @include min(sm) {
+        margin-right: 10px;
+      }
+      @include min(md) {
+        margin-right: 30px;
+      }
+      @include min(lg) {
+        margin-right: 50px;
+      }
+      &:before {
+        color: $color-secondary;
+        @include font-size(100);
+        line-height: 1;
+        @include min(lg) {
+          @include font-size(125);
+        }
+      }
+    }
+    .button {
+      min-width: 155px;
+    }
+    .text {
+      padding: 0 0 20px;
+      @include min(sm) {
+        padding: 20px 20px 20px 0;
+        margin-right: auto;
+      }
+      @include min(md) {
+      }
+      @include min(lg) {
+        padding: 0;
+      }
+      h3 {
+        margin-bottom: 5px;
+        color: $color-secondary;
+        text-align: left;
+        @include max(767px) {
+          text-align: center;
+        }
+      }
+      p {
+        text-align: left;
+        margin-bottom: 0;
+        @include max(767px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

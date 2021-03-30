@@ -1,0 +1,398 @@
+@import "./theme/globals";
+.color-primary {
+  @include gradient-primary();
+}
+.color-primary-ext {
+  background: $color-primary-light;
+  box-shadow: 0 10px 35px -5px rgba(0,0,0,.25);
+}
+
+:local(.Articles) {
+  .inside {
+    // background-color: $color-grey-40;
+    .decor-left {
+      max-width: 430px;
+      position: absolute;
+      top: 5%;
+      left: 0;
+    }
+    .decor-right {
+      max-width: 570px;
+      position: absolute;
+      bottom: -200px;
+      right: 0;
+    }
+  }
+  .container-main {
+    > .row {
+      justify-content: center;
+    }
+  }
+  .articles-list {
+    width: 100%;
+    @include min(sm) {
+      @include flexbox;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+:local(.ArticleFilter) {
+  margin-bottom: 15px;
+  // @include flexbox;
+  @include max(767px) {
+    flex-direction: column;
+  }
+  > .row {
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title {
+    position: relative;
+    margin-bottom: 0;
+    line-height: 30px;
+    font-family: $headline;
+    @include font-size(12);
+    @include min(sm) {
+      @include flex(1,0,auto);
+      margin-right: 10px;
+    }
+    @include max(767px) {
+      padding: 10px;
+      border-radius: 3px;
+      @include font-size(16);
+      text-transform: uppercase;
+      font-family: $headline;
+      background: #fff;
+      display: none;
+    }
+  }
+  .tags-filter {
+    @include flex(0,1,50%);
+  }
+  .sort-filter {
+    @include flex(0,1,calc(50% - 30px));
+    @include min(lg) {
+      @include flex(0,1,calc(50% - 35px));
+    }
+  }
+  .tags-filter, .sort-filter {
+    @include gutter;
+    @include max(767px) {
+      @include flex(0,1,100%);
+      width: 100%;
+    }
+  }
+  .sort-filter {
+    @include min(sm) {
+      @include flexbox;
+      align-items: center;
+    }
+    .filter-wrap {
+      position: relative;
+      @include min(sm) {
+        @include flex(0,1,100%);
+      }
+    }
+    div.filter {
+      width: 100%;
+      left: 0;
+    }
+  }
+  .tags-filter {
+    .filter {
+      width: calc(100% - 20px);
+      left: 10px;
+      @include min(lg) {
+        width: calc(100% - 30px);
+        left: 15px;
+      }
+    }
+  }
+  .tags-filter, .sort-filter {
+    position: relative;
+    span.placeholder {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 8px 10px;
+      line-height: 1;
+      border-radius: $radius;
+      @include font-size(12);
+      font-family: $headline;
+      background: #fff;
+      border: 1px solid #000;
+      cursor: pointer;
+      @include transition(border-color $speed, border-radius $speed);
+      &.active {
+        border-bottom-color: transparent;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &:before {
+          @include rotate(270);
+        }
+        &:after {
+          width: calc(100% - 20px);
+        }
+      }
+      &:before {
+        display: block;
+        @include font-size(6);
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -3px;
+        @include rotate(90);
+        will-change: transform;
+        @include transition(transform $speed);
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        background: #c3c3c3;
+        z-index: 15;
+      }
+    }
+    .filter {
+      padding: 0 10px;
+      background: #fff;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+      border: 1px solid #000;
+      border-top: 0;
+      position: absolute;
+      top: calc(100% - 1px);
+      z-index: 10;
+      @include transition(height $speed);
+      overflow: hidden;
+      &:not(.active) {
+        display: none;
+      }
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        @include font-size(12);
+        color: #c3c3c3;
+        font-family: $headline;
+        line-height: 1;
+        text-align: left;
+        border-top: 1px solid #c3c3c3;
+        cursor: pointer;
+        @include transition(background $speed, color $speed, padding-left $speed);
+        &:hover {
+          color: $color-primary;
+          padding-left: 5px;
+        }
+        &:first-child {
+          border-top: none;
+        }
+        &.filterung {
+          display: none;
+        }
+      }
+    }
+  }
+  .order-filter {
+    @include flex(1,0,20px);
+    padding-right: 10px;
+    @include min(lg) {
+      padding-right: 15px;
+    }
+    .filter {
+      position: relative;
+      display: block;
+      width: 20px;
+      @include flexbox;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    button {
+      position: relative;
+      @include font-size(18);
+      cursor: default;
+      width: 20px;
+      height: 15px;
+      @include flexbox;
+      align-items: center;
+      justify-content: center;
+      @include transition(color $speed);
+      &:hover {
+        color: $color-primary;
+      }
+      &:before {
+        display: block;
+        line-height: 1;
+        width: 10px;
+      }
+      &.asc {
+        &:before {
+          @include rotate(-90);
+          position: relative;
+          top: -3px;
+        }
+      }
+      &.desc {
+        &:before {
+          @include rotate(90);
+          left: 1px;
+        }
+      }
+    }
+  }
+}
+
+:local(.Post) {
+  margin: 10px 0;
+  @include min(sm) {
+    margin: 12px 0;
+  }
+  @include min(lg) {
+    margin: 15px 0;
+  }
+  @include max(767px) {
+  }
+
+  .teaser {
+    position: relative;
+    height: 100%;
+    padding: 22px 15px 15px ;
+    background: $color-grey-light;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $barHeight;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include gradient-primary();
+    }
+    @include min(sm) {
+      @include flexbox;
+      flex-direction: column;
+    }
+    .teaser-top {
+      @include min(sm) {
+        @include flexbox;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+    }
+    .teaser-bottom {
+      position: relative;
+      margin-top: auto;
+      padding-top: 20px;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        background: #bababa;
+      }
+    }
+    .supheadline {
+      color: $color-primary;
+      font-weight: 400;
+      line-height: 1;
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+      @include flex(0,1,100%);
+    }
+    .headline {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-transform: none;
+      text-align: left;
+      text-transform: uppercase;
+      width: 60%;
+      @include flex(0,1,60%);
+      padding-right: 10px;
+      @include min(lg) {
+        padding-right: 15px;
+      }
+    }
+    .meta-info {
+      &.info-top {
+        width: 40%;
+        @include flex(0,1,40%);
+        padding-left: 10px;
+        @include min(lg) {
+          padding-left: 15px;
+        }
+      }
+      .comments-count {
+        position: relative;
+        margin: 0;
+        line-height: 1;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        i {
+          @include font-size(20);
+          display: block;
+          &:before {
+            display: block;
+          }
+        }
+        span {
+          display: block;
+          width: 14px;
+          height: 14px;
+          text-align: center;
+          line-height: 13px;
+          @include font-size(10);
+          @include font($text);
+          background: $color-primary;
+          color: #fff;
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .description {
+      @include font-size(16);
+      margin-bottom: 0;
+    }
+    .meta-info {
+      &.info-bottom {
+        width: 100%;
+        @include flex(0,1,100%);
+        margin-bottom: 10px;
+        @include flexbox;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .time, .date {
+        margin-bottom: 0;
+        line-height: 1;
+        @include flexbox;
+        align-items: center;
+        @include font-size(14);
+        &:before {
+          margin-right: 5px;
+          @include font-size(13);
+          color: $color-primary;
+        }
+        span {
+        }
+      }
+    }
+    .button {
+    }
+  }
+}

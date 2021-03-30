@@ -1,0 +1,14 @@
+:local(.Logout) {}
+
+:local(.Logo) {
+  composes: Logo from "../Login/styles.css";
+}
+
+:local(.Content) {
+  text-align: center;
+  composes: Form from "../Login/styles.css";
+}
+
+:local(.Footer) {
+  composes: Footer from "../Login/styles.css";
+}

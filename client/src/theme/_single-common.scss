@@ -1,0 +1,711 @@
+@import "./theme/icons";
+.post--nav-common {
+    background: $color-text;
+    @include transition(top $speed);
+    &.is-fixed {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      z-index: 12;
+      @include min(sm) {
+        top: 100px;
+      }
+      @include min(lg) {
+        top: 125px;
+      }
+      .next-post {
+        top: calc(50% + 44px);
+      }
+    }
+    ul {
+      position: relative;
+      margin: 0;
+      @include flexbox;
+      align-items: center;
+      justify-content: space-between;
+      height: $blackNavHeight;
+    }
+    li {
+      position: relative;
+      @include flexbox;
+      align-items: center;
+      line-height: 1;
+      @include font-size(14);
+    }
+    i {
+      position: relative;
+      color: #fff;
+      @include font-size(10);
+      display: block;
+      width: 20px;
+      height: 20px;
+      line-height: 22px;
+      background: #fff;
+      border-radius: 50%;
+      text-align: center;
+      color: $color-black;
+    }
+    a:not(.button) {
+      position: relative;
+      font-weight: $regular;
+      color: #fff;
+      @include transition(color $speed);
+      @include min(sm) {
+        @include hover-border(-2px);
+      }
+    }
+    .back {
+      i {
+        position: relative;
+        display: block;
+        margin-right: 10px;
+        &:after {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 2px;
+          background: $color-black;
+          box-shadow: 0 3px $color-black, 0 6px $color-black;
+          position: absolute;
+          top: 6px;
+          left: 50%;
+          margin-left: -4px;
+        }
+      }
+    }
+    .prev, .next {
+      @include max(767px) {
+        font-size: 0;
+      }
+      i {
+        @include max(767px) {
+          position: absolute;
+          top: 50%;
+          @include transformY(-50%);
+        }
+      }
+      a:not(.button) {
+        @include max(767px) {
+          display: block;
+          width: 25px;
+          height: 25px;
+          z-index: 1;
+        }
+      }
+    }
+    .prev {
+      i {
+        @include min(sm) {
+          position: relative;
+          margin-right: 10px;
+        }
+        @include max(767px) {
+          left: 0
+        }
+        &:before {
+          position: relative;
+          right: 1px;
+        }
+      }
+    }
+    .next {
+      i {
+        @include min(sm) {
+          margin-left: 10px;
+        }
+        @include max(767px) {
+          right: 0
+        }
+        &:before {
+          position: relative;
+          left: 1px;
+        }
+      }
+    }
+    .--disabled,
+    .--disabled {
+      cursor: default;
+      color: #eae4e4;
+      opacity: .5;
+    }
+    .prev-post, .next-post {
+      position: absolute;
+      top: 50%;
+      width: 180px;
+      height: auto;
+      padding: 20px 10px 10px;
+      background: #fff;
+      @include transformY(-50%);
+      opacity: 0;
+      z-index: -1;
+      @include transition(opacity $speed);
+      @include max(1199px) {
+        display: none;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: $barHeight;
+        // @include gradient-primary();
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      li {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      span {
+        width: 100%;
+        display: block;
+      }
+      .subheadline {
+        margin-bottom: 5px;
+        // color: $color-primary;
+      }
+      .headline {
+        @include font($headline);
+        @include font-size(16);
+        margin-bottom: 8px;
+      }
+      .description {
+        margin-bottom: 0;
+        @include font-size(12);
+      }
+      .img {
+        margin-top: 5px;
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        border: 2px solid transparent;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: $radius;
+        padding: 5px 10px 7px;
+        font-weight: $bold;
+        letter-spacing: 0.5px;
+        @include font-size(13);
+        color: #fff;
+        background: $color-primary;
+        @include transition(background $speed, border-color $speed, color $speed);
+        &:hover {
+          background: none;
+        //   color: $color-primary;
+        //   border-color: $color-primary;
+        }
+      }
+    }
+    .prev:not(.--disabled):hover .prev-post {
+      opacity: 1;
+      z-index: 1;
+    }
+    .next:not(.--disabled):hover .next-post {
+      opacity: 1;
+      z-index: 1;
+    }
+    .prev-post {
+      @include min(lg) {
+        left: calc(100% + 15px);
+        box-shadow: 5px 5px 10px -2px rgba(0,0,0,.35);
+      }
+      // @include min(xxl) {
+      //   left: inherit;
+      //   right: calc(100% + 15px);
+      //   box-shadow: -5px 5px 10px -2px rgba(0,0,0,.35);
+      // }
+      @include min(max) {
+        left: inherit;
+        right: calc(100% + 15px);
+        box-shadow: -5px 5px 10px -2px rgba(0,0,0,.35);
+      }
+      @include min(max) {
+        left: inherit;
+        right: calc(100% + 15px);
+        // box-shadow: -5px 5px 10px -2px rgba(0,0,0,.35);
+      }
+    }
+    .next-post {
+      @include min(lg) {
+        right: calc(100% + 15px);
+        box-shadow: -5px 5px 10px -2px rgba(0,0,0,.35);
+      }
+      // @include min(xxl) {
+      //   right: inherit;
+      //   left: calc(100% + 15px);
+      //   box-shadow: 5px 5px 10px -2px rgba(0,0,0,.35);
+      // }
+      @include min(max) {
+        right: inherit;
+        left: calc(100% + 15px);
+        box-shadow: 5px 5px 10px -2px rgba(0,0,0,.35);
+      }
+    }
+}
+
+.post-articles-common {
+  @include padding(top);
+  @include padding(top);
+  @include min(lg) {
+    padding-bottom: 35px;
+  }
+  .wrapper, h1,h2,h3,h4,h5,h6 {
+    text-align: left;
+  }
+  .subheadline {
+    margin-bottom: -20px;
+    line-height: 1;
+    @include min(sm) {
+      margin-bottom: -25px;
+    }
+    @include min(lg) {
+      margin-bottom: -35px;
+    }
+  }
+  .wp-content {
+    .row {
+      padding: 0;
+    }
+  }
+}
+
+.post--info-common {
+  position: relative;
+  @include flexbox;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+
+    @include max(767px) {
+      margin-left: 0;
+    }
+
+    @include min(lg) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    a:after {
+      display: none;
+    }
+  }
+  .timestamp, .time {
+    @include font-size(14);
+    @include flexbox;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background: #fff;
+    color: $color-text;
+    @include flex(0,1,auto);
+    height: 25px;
+    i {
+      margin-right: 5px;
+      @include font-size(13);
+      line-height: 1;
+      position: relative;
+    }
+    span {
+      line-height: 1;
+      @include max(1199px) {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+  .timestamp {
+    span.title {
+      @include max(991px) {
+        display: none;
+      }
+    }
+  }
+  .time {
+    margin-left: 0;
+  }
+  .action-comments, .action-print, .action-bookmark, .action-likes {
+    a {
+      position: relative;
+      @include flexbox;
+      align-items: center;
+      text-decoration: none;
+      @include transition (color $speed);
+      cursor: pointer;
+      &:hover {
+        span.title:after {
+          width: 100%;
+        }
+      }
+    }
+    .icon-block {
+      position: relative;
+      display: block;
+      height: 25px;
+      line-height: 1;
+    }
+    span.title {
+      position: relative;
+      @include font-size(14);
+      @include hover-border(0);
+      @include transition(color $speed);
+    }
+  }
+  .action-likes {
+    margin-left: auto;
+    padding: 0;
+
+    @include max(767px) {
+      margin-left: 0;
+    }
+
+    a {
+      &:hover, &.is-liked {
+        i:after {
+          opacity: 1;
+        }
+        i:before {
+          opacity: 0;
+        }
+      }
+      &.is-liked {
+        @include transition(opacity $speed);
+        &:hover i:after {
+          opacity: 0.75;
+        }
+      }
+    }
+    .icon-block {
+      width: 33px;
+      i {
+        @include font-size(30);
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(-50%,-50%);
+        &:before, &:after {
+          @include transition(opacity $speed);
+        }
+        &:after {
+          @include icomoon;
+          content: $icon-like-filled;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+      }
+      span {
+        display: block;
+        width: 17px;
+        height: 17px;
+        text-align: center;
+        @include font-size(9);
+        line-height: 15px;
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        right: 0;
+        @include transition(opacity $speed);
+        &:not(.active) {
+          opacity: 0;
+        }
+      }
+      .is-hidden {
+        opacity: 0;
+      }
+    }
+    span.title {
+      margin-left: 10px;
+    }
+  }
+  .action-comments {
+    padding: 0;
+    .icon-block {
+      width: 33px;
+      i {
+        @include font-size(31);
+        line-height: 1;
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 50%;
+        @include transform(-50%,-50%);
+        @include min(lg) {
+          top: calc(50%  - 2px);
+        }
+      }
+      span {
+        display: block;
+        width: 17px;
+        height: 17px;
+        text-align: center;
+        @include font-size(9);
+        line-height: 15px;
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        right: 0;
+      }
+    }
+    span.title {
+      margin-left: 10px;
+    }
+  }
+  .action-print {
+    padding-left: 0;
+    i {
+      position: relative;
+      top: -4px;
+      @include font-size(29);
+    }
+    span {
+      pointer-events: none;
+    }
+    span.title {
+      margin-left: 10px;
+    }
+  }
+  .action-bookmark {
+    padding: 0;
+    .icon-block {
+      i {
+        position: relative;
+        top: -4px;
+        @include font-size(29);
+      }
+      span.add, span.remove {
+        display: block;
+        width: 17px;
+        height: 17px;
+        text-align: center;
+        @include font-size(12);
+        line-height: 13px;
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        right: 0;
+      }
+      span.add {
+      }
+      span.remove {
+      }
+    }
+    span {
+      pointer-events: none;
+    }
+    span.title {
+      margin-left: 10px;
+    }
+  }
+}
+
+.post--intro-common {
+  .intro--title {
+    @include font-size(22);
+    @include font($headline);
+    color: #fff;
+    text-align: center;
+    min-height: 32px;
+  }
+  .intro--text {
+    padding-top: $gap;
+    padding-bottom: $gap;
+    @include min(sm) {
+      padding-top: $gap-sm;
+      padding-bottom: $gap-sm;
+    }
+    .headline {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+  }
+  .buttons {
+    @include flexbox;
+    align-content: center;
+    @include font-size(16);
+    .tags, .actions {
+      position: relative;
+      @include flexbox;
+      align-content: center;
+      div {
+        margin: 0;
+        @include min(md) {
+          // margin: 0 4px;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .tags {
+      padding-right: 12px;
+      display: none;
+    }
+    .button--purple {
+      a {
+        &:before {
+          border-radius: 7px;
+          top: -2px;
+          height: calc(100% + 4px);
+        }
+        i {
+          top: 2px;
+        }
+      }
+    }
+    a {
+      position: relative;
+      text-transform: none;
+      font-weight: $bold;
+      padding: 2px 10px 6px;
+      border-radius: 7px;
+    }
+    .count {
+      display: block;
+      width: 16px;
+      height: 16px;
+      color: #fff;
+      text-align: center;
+      line-height: 14px;
+      @include font-size(11);
+      border-radius: 50%;
+      background: #f3201c;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+    }
+  }
+}
+
+.newest-related-common {
+  .row {
+    h1,h2,h3 {
+      text-align: left;
+      margin-bottom: 0;
+    }
+    > div {
+      @include margin(bottom);
+      @include min(lg) {
+        margin-bottom: 35px;
+      }
+    }
+    > div:first-child {
+      margin-bottom: 25px;
+    }
+  }
+}
+.related-common {
+  position: relative;
+  padding: 40px 30px 30px;
+  background: #fff;
+  @include transition(box-shadow $speed);
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: $barHeight;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:hover {
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.35);
+    .button a {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+  .teaser-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .teaser-top {
+    @include flexbox;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-bottom: 25px;
+    .supheadline {
+      // color: $color-primary;
+      @include font-size(18);
+      line-height: 1;
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      @include flex(0,1,100%);
+    }
+    .headline {
+      margin-top: 0;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    p {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+  .teaser-bottom {
+    position: relative;
+  }
+  .meta-info {
+    @include flexbox;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 25px;
+    .time {
+      @include font-size(14);
+      @include flexbox;
+      align-items: center;
+      margin-bottom: 0;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #7a7a7a;
+      @include flex(0,1,auto);
+      &:before {
+        margin-right: 5px;
+        @include font-size(13);
+        line-height: 1;
+      }
+      span {
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.comments-common {
+  @include padding(top);
+  @include padding(bottom);
+
+  &:before {
+    display: block;
+    content: "";
+    height: 0;
+    border-top: 1px solid $color-border;
+    margin: 0 0 30px;
+  }
+}

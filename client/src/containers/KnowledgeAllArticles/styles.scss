@@ -1,0 +1,373 @@
+@import "./theme/globals";
+@import "./theme/icons";
+
+.color-primary {
+  @include gradient-primary();
+}
+.color-primary-ext {
+  background: $color-primary-light;
+}
+
+.no-padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.tiles {
+  @include flexbox;
+  flex-wrap: wrap;
+  width: 100%;
+  @include min(sm) {
+    margin-top: -12px;
+    margin-bottom: -12px;
+  }
+  @include min(lg) {
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+}
+
+:local(.IntroBlock) {
+  composes: IntroBlock from "../Knowledge/styles.css";
+  .col-left {
+    // @include min(sm) {
+    //   width: calc(100% - 190px);
+    // }
+  }
+  .col-right {
+    // @include min(sm) {
+    //   max-width: 190px;
+    // }
+  }
+}
+
+:local(.FilterBar) {
+  composes: FilterBar from "../Knowledge/styles.css";
+  .filter button:hover {
+    color: $color-primary;
+  }
+}
+
+:local(.FilterTags) {
+  composes: FilterTags from "../Knowledge/styles.css";
+  .tag {
+    pointer-events: initial !important;
+  }
+  i.icon {
+    border-color: $color-primary !important;
+    color: $color-primary;
+  }
+  .tag:hover, .tag.active {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+:local(.Post) {
+  @include min(sm) {
+    margin: 12px 0;
+  }
+  @include min(lg) {
+    margin: 15px 0;
+  }
+  @include max(767px) {
+    margin-top: 35px;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+
+  .teaser {
+    position: relative;
+    height: 100%;
+    padding: 40px 30px 30px ;
+    background: #fff;
+    @include transition(box-shadow $speed);
+    @include min(sm) {
+      @include flexbox;
+      flex-direction: column;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $barHeight;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-primary;
+    }
+    &:hover {
+      box-shadow: 0 0 15px 0 rgba(0,0,0,.35);
+      .button a {
+        // &:before {
+        //   opacity: 0;
+        // }
+        opacity: .75;
+      }
+      .headline {
+        color: $color-primary;
+      }
+    }
+    .teaser-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .teaser-top {
+      @include flexbox;
+      align-items: center;
+      margin-bottom: 20px;
+      z-index: 1;
+      .likes {
+        position: relative;
+        padding: 0;
+        width: 25px;
+        height: 24px;
+        top: -1px;
+        a {
+          display: block;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          &:hover, &.is-liked {
+            i:after {
+              opacity: 1;
+            }
+            i:before {
+              opacity: 0;
+            }
+          }
+          &.is-liked {
+            @include transition(opacity $speed);
+            &:hover i:after {
+              opacity: 0.75;
+            }
+          }
+        }
+        .icon-block {
+          width: 21px;
+          height: 23px;
+          i {
+            @include font-size(21);
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(-50%,-50%);
+            &:before, &:after {
+              @include transition(opacity $speed);
+              display: block;
+              width: 22px;
+              height: 20px;
+            }
+            &:after {
+              @include icomoon;
+              content: $icon-like-filled;
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              color: $color-primary;
+            }
+          }
+          span {
+            display: block;
+            width: 17px;
+            height: 17px;
+            text-align: center;
+            @include font-size(9);
+            line-height: 15px;
+            color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            right: -3px;
+            background: $color-primary;
+            border: 2px solid #fff;
+            @include transition(opacity $speed);
+            &:not(.active) {
+              opacity: 0;
+            }
+          }
+          .is-hidden {
+            opacity: 0;
+          }
+        }
+        span.title {
+          margin-left: 10px;
+        }
+      }
+      .comments {
+        position: relative;
+        padding: 0;
+        width: 25px;
+        height: 24px;
+        top: -1px;
+        margin-left: 10px;
+        .icon-block {
+          width: 21px;
+          height: 23px;
+          i {
+            @include font-size(21);
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(-50%,-50%);
+            &:before {
+              display: block;
+              width: 22px;
+              height: 20px;
+            }
+          }
+          span {
+            display: block;
+            width: 17px;
+            height: 17px;
+            text-align: center;
+            @include font-size(9);
+            line-height: 15px;
+            color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            right: -3px;
+            background: $color-primary;
+            border: 2px solid #fff;
+          }
+        }
+        span.title {
+          margin-left: 10px;
+        }
+      }
+      .bookmark {
+        position: relative;
+        margin-left: 10px;
+        padding-left: 10px;
+        &:before {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 14px;
+          background: $color-text;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -7px;
+        }
+        button {
+          position: relative;
+          @include flexbox;
+          align-items: center;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            span.title {
+              color: $color-primary;
+            }
+          }
+        }
+        .icon-block {
+          position: relative;
+          display: block;
+          width: 21px;
+          height: 24px;
+        }
+        i {
+          @include font-size(21);
+          line-height: 1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(-50%, -50%);
+        }
+        span {
+          pointer-events: none;
+        }
+        span.add, span.remove {
+          display: block;
+          width: 17px;
+          height: 17px;
+          text-align: center;
+          @include font-size(9);
+          color: #fff;
+          line-height: 13px;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          margin-top: -13px;
+          right: -3px;
+          background: $color-primary;
+          border: 2px solid #fff;
+        }
+        span.add {
+        }
+        span.remove {
+        }
+        span.title {
+          @include font-size(11);
+          margin-left: 5px;
+          @include transition (color $speed);
+        }
+      }
+    }
+    .headline {
+      margin-top: 0;
+      margin-bottom: 25px;
+      text-transform: none;
+      text-align: left;
+      @include transition(color $speed);
+    }
+    .description {
+      @include font-size(16);
+      margin-bottom: 25px;
+    }
+    .tags {
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $color-border;
+      p {
+        display: inline-block;
+        vertical-align: middle;
+        @include font-size(14);
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+        color: $color-primary;
+        padding: 6px 5px 4px 5px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    .actions {
+      @include flexbox;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      .time {
+        @include font-size(14);
+        @include flexbox;
+        align-items: center;
+        margin-bottom: 0;
+        color: $color-text;
+        @include flex(0,1,auto);
+        &:before {
+          margin-right: 5px;
+          @include font-size(13);
+          line-height: 1;
+        }
+        span {
+          line-height: 1;
+        }
+      }
+      .button {
+      }
+    }
+  }
+}

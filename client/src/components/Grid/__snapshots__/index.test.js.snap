@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col renders correctly 1`] = `
+<div
+  className="col-12"
+/>
+`;
+
+exports[`Col renders correctly with params 1`] = `
+<div
+  className="randomClass col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 offset-1 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 push-1 push-sm-1 push-md-1 push-lg-1 push-xl-1 pull-1 pull-sm-1 pull-md-1 pull-lg-1 pull-xl-1 align-self-end flex-end align-items-center justify-content-center"
+/>
+`;
+
+exports[`Row renders correctly 1`] = `
+<div
+  className="row"
+/>
+`;
+
+exports[`Row renders correctly with params 1`] = `
+<div
+  className="row randomClass align-items-center justify-content-end no-gutters"
+/>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="container-default"
+/>
+`;
+
+exports[`renders correctly with params 1`] = `
+<div
+  className="container-fluid randomClass"
+/>
+`;
+
+exports[`renders whole grid correctly 1`] = `
+<div
+  className="container-default"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <p>
+        Test
+      </p>
+    </div>
+    <div
+      className="col-12"
+    >
+      <p>
+        Test
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <p>
+        Test
+      </p>
+    </div>
+    <div
+      className="col-12"
+    >
+      <p>
+        Test
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,950 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Daimler Protics SimpliCity\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-02 14:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: ../../../../server/plugin/options/options-init.php:27
+#: ../../../../server/plugin/options/options-init.php:32
+#: ../../../../server/plugin/classes/simplicity/plugin.php:486
+msgid "SIMPLICITY"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:29
+msgid "Options"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:80
+msgid "Access"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:88
+msgid "User roles"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:96
+msgid "Custom roles"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:97
+msgid "Will be used for access restriction in frontend"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:99
+#: ../../../../server/plugin/options/options-init.php:125
+#: ../../../../server/plugin/options/options-init.php:150
+msgid "Add more"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:106
+#: ../../../../server/plugin/classes/simplicity/plugin.php:331
+#: ../../../../server/plugin/classes/simplicity/plugin.php:497
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:64
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:136
+msgid "Library"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:114
+#: ../../../../server/plugin/options/options-init.php:122
+#: ../../../../server/plugin/options/options-init.php:139
+#: ../../../../server/plugin/options/options-init.php:147
+msgid "Tags"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:123
+msgid "Will be used for filtering the library articles"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:132
+#: ../../../../server/plugin/classes/simplicity/plugin.php:330
+#: ../../../../server/plugin/classes/simplicity/plugin.php:498
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:66
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:91
+msgid "Academy"
+msgstr ""
+
+#: ../../../../server/plugin/options/options-init.php:148
+msgid "Will be used for filtering the academy articles"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc.php:149
+msgid "Attach video"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:200
+msgid "Page options"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:204
+msgid "Authentification required"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:215
+msgid "User has to be authenticated to view or request this page"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:252
+msgid "Menu"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:256
+#: ../../../../server/plugin/classes/vc/video.php:12
+msgid "Title"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:275
+msgid "Description"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:294
+#: ../../../../server/plugin/classes/vc/image.php:22
+#: ../../../../server/plugin/classes/vc/image.php:30
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:256
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:159
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:278
+msgid "Image"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:318
+msgid "Inherit items as children from"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:369
+msgid "&larr; Back to SIMPLICITY"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:499
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:60
+msgid "FAQ"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:515
+#: ../../../../server/plugin/classes/simplicity/plugin.php:516
+msgid "Menus"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:530
+msgid "Main menu"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:531
+msgid "Footer menu"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:532
+msgid "Footer menu (logged out)"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:691
+#, php-format
+msgid "Your account has been created on %s"
+msgstr ""
+
+#. %s: user login
+#: ../../../../server/plugin/classes/simplicity/plugin.php:714
+#, php-format
+msgid "Your username: %s"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:715
+msgid "To set your password, visit the following address:"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/plugin.php:718
+#, php-format
+msgid "Visit %s: %s"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/info.php:4
+msgid "Info"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/info.php:7
+#: ../../../../server/plugin/classes/vc/info.php:20
+#: ../../../../server/plugin/classes/vc/table_50_50.php:7
+#: ../../../../server/plugin/classes/vc/table_50_50.php:30
+#: ../../../../server/plugin/classes/vc/hero.php:7
+#: ../../../../server/plugin/classes/vc/hero.php:18
+#: ../../../../server/plugin/classes/vc/gallery.php:7
+#: ../../../../server/plugin/classes/vc/steps.php:7
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:7
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:30
+#: ../../../../server/plugin/classes/vc/include-learning-article.php:7
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:7
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:45
+#: ../../../../server/plugin/classes/vc/divider.php:7
+#: ../../../../server/plugin/classes/vc/downloads.php:7
+#: ../../../../server/plugin/classes/vc/alert.php:7
+#: ../../../../server/plugin/classes/vc/alert.php:20
+#: ../../../../server/plugin/classes/vc/image_text.php:7
+#: ../../../../server/plugin/classes/vc/image_text.php:36
+#: ../../../../server/plugin/classes/vc/list.php:7
+#: ../../../../server/plugin/classes/vc/include-knowledge-article.php:7
+#: ../../../../server/plugin/classes/vc/quote.php:7
+#: ../../../../server/plugin/classes/vc/video.php:7
+#: ../../../../server/plugin/classes/vc/steps_image.php:7
+#: ../../../../server/plugin/classes/vc/steps_image.php:42
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:7
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:30
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:7
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:30
+#: ../../../../server/plugin/classes/vc/tip.php:7
+#: ../../../../server/plugin/classes/vc/tip.php:20
+#: ../../../../server/plugin/classes/vc/image.php:25
+#: ../../../../server/plugin/classes/vc/button.php:7
+msgid "Content"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/info.php:13
+#: ../../../../server/plugin/classes/vc/table_50_50.php:24
+#: ../../../../server/plugin/classes/vc/hero.php:12
+#: ../../../../server/plugin/classes/vc/steps.php:44
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:24
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:39
+#: ../../../../server/plugin/classes/vc/downloads.php:25
+#: ../../../../server/plugin/classes/vc/alert.php:13
+#: ../../../../server/plugin/classes/vc/image_text.php:30
+#: ../../../../server/plugin/classes/vc/list.php:40
+#: ../../../../server/plugin/classes/vc/quote.php:25
+#: ../../../../server/plugin/classes/vc/steps_image.php:36
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:24
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:24
+#: ../../../../server/plugin/classes/vc/tip.php:13
+msgid "Headline"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_50_50.php:4
+msgid "Tabelle 50/50"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_50_50.php:13
+#: ../../../../server/plugin/classes/vc/steps.php:13
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:13
+#: ../../../../server/plugin/classes/vc/accordion.php:34
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:13
+#: ../../../../server/plugin/classes/vc/downloads.php:13
+#: ../../../../server/plugin/classes/vc/image_text.php:13
+#: ../../../../server/plugin/classes/vc/list.php:13
+#: ../../../../server/plugin/classes/vc/quote.php:13
+#: ../../../../server/plugin/classes/vc/steps_image.php:13
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:13
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:13
+#: ../../../../server/plugin/classes/vc/button.php:25
+msgid "Style"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_50_50.php:15
+#: ../../../../server/plugin/classes/vc/steps.php:15
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:15
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:15
+#: ../../../../server/plugin/classes/vc/downloads.php:15
+#: ../../../../server/plugin/classes/vc/image_text.php:15
+#: ../../../../server/plugin/classes/vc/list.php:15
+#: ../../../../server/plugin/classes/vc/quote.php:15
+#: ../../../../server/plugin/classes/vc/steps_image.php:15
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:15
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:15
+msgid "Color Style"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_50_50.php:17
+#: ../../../../server/plugin/classes/vc/steps.php:17
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:17
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:19
+#: ../../../../server/plugin/classes/vc/downloads.php:17
+#: ../../../../server/plugin/classes/vc/image_text.php:17
+#: ../../../../server/plugin/classes/vc/list.php:19
+#: ../../../../server/plugin/classes/vc/quote.php:17
+#: ../../../../server/plugin/classes/vc/steps_image.php:17
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:17
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:17
+msgid "Cyan"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_50_50.php:18
+#: ../../../../server/plugin/classes/vc/steps.php:18
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:18
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:20
+#: ../../../../server/plugin/classes/vc/downloads.php:18
+#: ../../../../server/plugin/classes/vc/image_text.php:18
+#: ../../../../server/plugin/classes/vc/list.php:20
+#: ../../../../server/plugin/classes/vc/quote.php:18
+#: ../../../../server/plugin/classes/vc/steps_image.php:18
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:18
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:18
+msgid "Purple"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_50_50.php:32
+msgid ""
+"<table style='border-collapse: collapse; width: 100%;' border='1' data-mce-"
+"style='border-collapse: collapse; width: 100%;' data-mce-selected='1'><tbody>"
+"<tr><th>I am bold first col</th><td>I am ordinary content col</td></tr>"
+"</tbody></table>"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/hero.php:4
+msgid "Hero"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/hero.php:24
+msgid "Button link"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/hero.php:30
+msgid "Button text"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/hero.php:36
+#: ../../../../server/plugin/classes/vc/image_text.php:24
+#: ../../../../server/plugin/classes/vc/steps_image.php:30
+msgid "Background image"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/gallery.php:4
+msgid "Gallery"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/gallery.php:12
+msgid "Images"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:4
+msgid "Step-by-Step"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:19
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:18
+#: ../../../../server/plugin/classes/vc/list.php:18
+msgid "White"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:26
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:27
+#: ../../../../server/plugin/classes/vc/list.php:27
+#: ../../../../server/plugin/classes/vc/button.php:68
+msgid "Icon"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:28
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:29
+#: ../../../../server/plugin/classes/vc/list.php:29
+msgid "Icon of the listitem"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:30
+msgid "Count"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:31
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:33
+#: ../../../../server/plugin/classes/vc/list.php:33
+msgid "Star"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:38
+#: ../../../../server/plugin/classes/vc/downloads.php:32
+msgid "Text Column"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps.php:51
+#: ../../../../server/plugin/classes/vc/downloads.php:38
+#: ../../../../server/plugin/classes/vc/list.php:53
+#: ../../../../server/plugin/classes/vc/list.php:68
+msgid "List item"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:4
+msgid "Tabelle 25/25/25/25"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_25_25_25_25.php:32
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:32
+msgid ""
+"<table style='border-collapse: collapse; width: 100%;' border='1' data-mce-"
+"style='border-collapse: collapse; width: 100%;' data-mce-selected='1'><tbody>"
+"<tr><th>I am bold first col</th><td>I am ordinary content col</td><td>I am "
+"ordinary content col</td><td>I am ordinary content col</td></tr></tbody>"
+"</table>"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/include-learning-article.php:4
+msgid "Include academy article"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/include-learning-article.php:12
+#: ../../../../server/plugin/classes/vc/include-knowledge-article.php:12
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:61
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:384
+msgid "Article"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/accordion.php:37
+#: ../../../../server/plugin/classes/vc/button.php:30
+msgid "Cyan Gradient"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/accordion.php:38
+#: ../../../../server/plugin/classes/vc/button.php:31
+msgid "Purple Gradient"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:4
+msgid "Liste Wysiwyg"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:17
+#: ../../../../server/plugin/classes/vc/list.php:17
+msgid "Transparent"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:31
+#: ../../../../server/plugin/classes/vc/list.php:31
+msgid "Dot"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list_wysiwyg.php:32
+#: ../../../../server/plugin/classes/vc/list.php:32
+msgid "Arrow"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:4
+msgid "Divider"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:13
+msgid "Margins"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:15
+msgid "Margins before or after divider"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:17
+msgid "No margin"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:18
+msgid "Margin top"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:19
+msgid "Margin bottom"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/divider.php:20
+msgid "Margin top/bottom"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/downloads.php:4
+msgid "Downloads"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/downloads.php:44
+msgid "Attach Media"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/alert.php:4
+msgid "Alert"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/image_text.php:4
+msgid "Bild/Text"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list.php:4
+msgid "List"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list.php:47
+msgid "Text Column 1"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/list.php:62
+msgid "Text Column 2"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/include-knowledge-article.php:4
+msgid "Include library article"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/quote.php:4
+msgid "Zitat"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/video.php:4
+#: ../../../../server/plugin/classes/simplicity/video/base.php:39
+#: ../../../../server/plugin/classes/simplicity/video/base.php:63
+#: ../../../../server/plugin/classes/simplicity/video/base.php:67
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:386
+msgid "Video"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/video.php:18
+msgid "Video (MP4)"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/video.php:24
+msgid "Poster"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps_image.php:4
+msgid "Step-by-Step (image)"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/steps_image.php:25
+msgid "Row"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_30_30_20_20.php:4
+msgid "Tabelle 30/30/20/20"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:4
+msgid "Tabelle 33/33/33"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/table_33_33_33.php:32
+msgid ""
+"<table style='border-collapse: collapse; width: 100%;' border='1' data-mce-"
+"style='border-collapse: collapse; width: 100%;' data-mce-selected='1'><tbody>"
+"<tr><th>I am bold first col</th><td>I am ordinary content col</td><td>I am "
+"ordinary content col</td></tr></tbody></table>"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/tip.php:4
+msgid "Tip"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/image.php:16
+msgid "Full width"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/image.php:36
+#: ../../../../server/plugin/classes/vc/button.php:37
+msgid "Size"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/image.php:43
+msgid "Magnify on click?"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:4
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:110
+msgid "Button"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:12
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:205
+msgid "Text"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:18
+#: ../../../../server/plugin/classes/vc/button.php:72
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:144
+msgid "Link"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:28
+msgid "Light"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:29
+msgid "Dark"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:40
+msgid "small"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:41
+msgid "medium"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:42
+msgid "large"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:48
+msgid "Outline"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:50
+msgid "Ghost button"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:56
+msgid "Alignment"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:59
+msgid "Inline"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:60
+msgid "Left"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:61
+msgid "Right"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:62
+msgid "Center"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:71
+msgid "Default"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:73
+msgid "Download"
+msgstr ""
+
+#: ../../../../server/plugin/classes/vc/button.php:74
+msgid "None"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/video/base.php:38
+#: ../../../../server/plugin/classes/simplicity/video/base.php:40
+msgid "Videos"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:36
+msgid "Categories"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:37
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:40
+msgid "Category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:38
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:41
+msgid "All categories"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:39
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:42
+msgid "Edit category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:40
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:43
+msgid "View category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:41
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:44
+msgid "Update category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:42
+msgid "Add new category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:43
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:46
+msgid "Parent category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:44
+msgid "Search categories"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:45
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:48
+msgid "← Back to categories"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:62
+msgid "All Articles"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:89
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:259
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:315
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:95
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:280
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:484
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:127
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:466
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:86
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:140
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:302
+msgid "Order"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:125
+msgid "Show button?"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:171
+msgid "Target"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:191
+msgid "Same window"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:192
+msgid "New window"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:224
+msgid "Read more"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/faq/base.php:255
+msgid "FAQ category"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:41
+msgid "Topics / modules"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:42
+msgid "Topic / module"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:43
+msgid "All topics / modules"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:44
+msgid "Edit topic / module"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:45
+msgid "View topic / module"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:46
+msgid "Update topic / module"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:47
+msgid "Add new topic / module"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:48
+msgid "Parent topic"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:49
+msgid "Search topics / modules"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:50
+msgid "← Back to topics / modules"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:67
+msgid "Academy Article"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:68
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:66
+msgid "Articles"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:116
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:159
+msgid "Reading time"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:130
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:173
+msgid "minutes"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:137
+msgid "Linked academy articles"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:163
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:232
+msgid "Views"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:205
+msgid "Academy topics"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:209
+msgid "Difficulty"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:237
+msgid "Read in order"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:301
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:180
+msgid "Tag"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:324
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:323
+msgid "Exclude user roles"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:368
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:372
+msgid "Article type"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:385
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:44
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:45
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:46
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:69
+msgid "Quiz"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:397
+msgid "Choose quiz"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/learning/base.php:427
+msgid "Choose video"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:73
+msgid "Can be skipped?"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:92
+msgid "Questions"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:111
+msgid "Type"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:123
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:183
+msgid "Single Choice"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:124
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:250
+msgid "Multiple Choice"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:125
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:317
+msgid "True / false"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:126
+msgid "Assignment"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:140
+msgid "Question"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:210
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:277
+msgid "Answer"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:229
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:296
+msgid "Correct Answer"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:340
+msgid "Is true?"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:359
+msgid "Label \"true\""
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:378
+msgid "Label \"false\""
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:399
+msgid "Assign"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:426
+msgid "Term"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:445
+msgid "Assigned term"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:493
+msgid "Item"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:514
+msgid "Incorrect Message"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:535
+msgid "Message when quiz completed successfully"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:554
+msgid "Message when failing the quiz"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:573
+msgid "Helpful links when failing the quiz"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:588
+msgid "Add link"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/quiz/base.php:611
+msgid "Link text"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:39
+msgid "Categories / subcategories"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:45
+msgid "Add new category / subcategory"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:47
+msgid "Search categories / subcategories"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:65
+msgid "Library Article"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:204
+msgid "Linked library articles"
+msgstr ""
+
+#: ../../../../server/plugin/classes/simplicity/knowledge/base.php:274
+msgid "Library topics"
+msgstr ""
+
+#. Name of the plugin
+msgid "Daimler Protics SimpliCity"
+msgstr ""
+
+#. Description of the plugin
+msgid "Extension for Daimler Protics SimpliCity"
+msgstr ""

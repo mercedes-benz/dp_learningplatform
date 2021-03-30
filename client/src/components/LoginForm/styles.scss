@@ -1,0 +1,185 @@
+@import "./theme/globals";
+
+:local(.LoginBlock) {}
+
+:local(.LoginOIDC) {
+  margin-bottom: 50px;
+  .inner {
+    padding: 35px 20px;
+    background: #fff;
+    text-align: center;
+  }
+  .button {
+    margin-bottom: 25px;
+  }
+  .no-account {
+    margin-bottom: 0;
+    @include font-size(12);
+    a {
+      text-decoration: underline;
+      color: $color-secondary;
+      @include transition(opacity $speed);
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+}
+
+:local(.LoginForm) {
+  .login-toggler {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    margin: 0;
+    background:#fff;
+    text-align: left;
+    @include font-size(16);
+    line-height: 1;
+    font-family: $text;
+    font-weight: $regular;
+    @include transition(background $speed, color $speed);
+    &:before, &:after {
+      display: none !important;
+    }
+    span {
+      pointer-events: none;
+    }
+    i {
+      @include font-size(10);
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -5px;
+      @include flexbox;
+      will-change: transform;
+      pointer-events: none;
+      @include transition(transform $speed);
+      &:before {
+        position: relative;
+        height: 7px;
+      }
+    }
+    &:hover, &.active {
+      background: $color-text;
+      color: #fff;
+      i {
+        @include rotate(180);
+      }
+    }
+  }
+  .login-dropdown {
+    text-align: center;
+    padding: 35px 20px;
+    background: #fff;
+    @include transition(opacity $speed 0.2s, height $speed);
+    &:not(.is-open) {
+      opacity: 0;
+      overflow: hidden;
+      height: 0;
+    }
+    > p {
+      margin-bottom: 30px;
+    }
+  }
+
+  .form-control {
+    width: 50%;
+    display: inline-block;
+    padding-right: 30px;
+    margin-bottom: 30px;
+
+    @include max(768px) {
+      width: 100%;
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(2n) {
+      padding-right: 0;
+      padding-left: 30px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 0;
+      font-size: 1rem;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: inset 0 0 0px 9999px white;
+      }
+    }
+  }
+
+  .button {
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 0;
+    &.lost-pw {
+      margin-bottom: 15px;
+    }
+    a {
+      color: $color-secondary;
+      transition: all $speed;
+      white-space: nowrap;
+      &:after {
+        background: $color-secondary;
+      }
+    }
+  }
+  ul {
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    li {
+      position: relative;
+      @include font-size(12);
+      padding: 0 5px;
+      &:first-child {
+        &:before {
+          @include min(sm) {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 10px;
+            background: $color-border;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: underline;
+      color: $color-secondary;
+      @include transition(opacity $speed);
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+}
+
+:local(.version) {
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  text-align: center;
+  color: lighten($color-black, 70%);
+  margin: 30px 0;
+}

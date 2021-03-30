@@ -1,0 +1,177 @@
+$container-default-width: 1400px;
+$container-small-width: 1170px;
+
+$gap: 15px;
+$gap-sm: 30px;
+$gap-lg: 30px;
+
+$gutter: 10px;
+$gutter-sm: 10px;
+$gutter-lg: 15px;
+
+$width: 100%;
+$width-sm: 720px;
+$width-md: 960px;
+$width-lg: 1200px;
+$width-xl: 1400px;
+@mixin container {
+  width: $width;
+  @include min(sm) {
+    width: $width-sm;
+  }
+  @include min(md) {
+    width: $width-md;
+  }
+  @include min(lg) {
+    width: $width-lg;
+  }
+  @include min(xl) {
+    width: $width-xl;
+  }
+}
+
+$speed: 0.2s ease-in;
+$radius: 5px;
+$barHeight: 10px;
+$itemsOpacity: 0.75;
+
+// colors
+$color-primary: #00B3C1;
+$color-primary-light: #1de2f2;
+$color-primary-extralight: #d9fafd;
+$color-secondary: #5b379c;
+$color-secondary-light: #8c62d8;
+$color-secondary-extralight: #efe6ff;
+$color-extra: #d9e2f1;
+$color-text: #000;
+$color-black: #000;
+$color-grey: #707070;
+$color-grey-40: #9e9e9e;
+$color-grey-20: #c8c8c8;
+$color-grey-light: #f0f0f0;
+$color-border: #d0cfcf;
+$color-background: #f7f7f7;
+
+$orange: #e69123;
+$orange-light: #fae6d2;
+$green: #46a081;
+$green-light: #cdf0e5;
+$red: #d30b50;
+$red-light: #f8d9e4;
+
+$available: #5b379c;
+$done: #009260;
+$wip: #E69123;
+$closed:#9E9E9E;
+$failed: #D30B50;
+
+$regular: 400;
+$bold: 500;
+$heavy: 700;
+// $text: "Source Sans Pro", sans-serif;
+// $headline: "Center-Demi";
+$text: "DaimlerCS-Regular";
+$headline: "DaimlerCS-Bold";
+@mixin font($family, $weight: false) {
+  font-family: $family;
+  @if $weight {
+    font-weight: $weight;
+  }
+}
+
+$headerHeight: 80px;
+$headerHeightSm: 95px;
+$headerHeightMd: 100px;
+$headerHeightLg: 125px;
+
+$blackNavHeight: 40px;
+
+@mixin gradient-primary($direction: 45deg) {
+  background: $color-primary; /* Old browsers */
+  background: -moz-linear-gradient(
+    $direction,
+    $color-primary 0%,
+    $color-primary-light 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    $direction,
+    $color-primary 0%,
+    $color-primary-light 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    $direction,
+    $color-primary 0%,
+    $color-primary-light 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33cec6', endColorstr='#54e2db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+@mixin gradient-secondary($direction: 45deg) {
+  background: $color-secondary; /* Old browsers */
+  background: -moz-linear-gradient(
+    $direction,
+    $color-secondary 0%,
+    $color-secondary-light 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    $direction,
+    $color-secondary 0%,
+    $color-secondary-light 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    $direction,
+    $color-secondary 0%,
+    $color-secondary-light 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b379c', endColorstr='#8c62d8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin padding($direction, $double: false) {
+  padding-#{$direction}: $gap;
+  @include min(sm) {
+    @if $double {
+      padding-#{$direction}: $gap-sm * 2;
+    } @else {
+      padding-#{$direction}: $gap-sm;
+    }
+  }
+  @include min(lg) {
+    @if $double {
+      padding-#{$direction}: $gap-lg * 2;
+    } @else {
+      padding-#{$direction}: $gap-lg;
+    }
+  }
+}
+@mixin gutter {
+  padding-left: $gutter;
+  padding-right: $gutter;
+  @include min(sm) {
+    padding-left: $gutter-sm;
+    padding-right: $gutter-sm;
+  }
+  @include min(lg) {
+    padding-left: $gutter-lg;
+    padding-right: $gutter-lg;
+  }
+}
+@mixin row {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  @include min(sm) {
+    margin-left: -$gutter-sm;
+    margin-right: -$gutter-sm;
+  }
+  @include min(lg) {
+    margin-left: -$gutter-lg;
+    margin-right: -$gutter-lg;
+  }
+}
+@mixin margin($direction) {
+  margin-#{$direction}: $gap;
+  @include min(sm) {
+    margin-#{$direction}: $gap-sm;
+  }
+  @include min(lg) {
+    margin-#{$direction}: $gap-lg;
+  }
+}

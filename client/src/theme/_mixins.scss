@@ -1,0 +1,269 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin fontfix {
+  -webkit-font-smoothing: antialiased;
+  // -webkit-text-stroke: 1px transparent;
+  // text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin font-size($pxValue) {
+  $remValue: ($pxValue / 16); // Assumes the browser default, typically `16px`
+  font-size: #{$pxValue}px;
+  font-size: #{$remValue}rem;
+}
+
+@mixin line-height($pxValue) {
+  $remValue: ($pxValue / 16); // Bootstrap html root font-size
+  line-height: #{$pxValue}px;
+  line-height: #{$remValue}rem;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transformX($args...) {
+  -webkit-transform: translateX($args);
+  -moz-transform: translateX($args);
+  -ms-transform: translateX($args);
+  -o-transform: translateX($args);
+  transform: translateX($args);
+}
+
+@mixin transformY($args...) {
+  -webkit-transform: translateY($args);
+  -moz-transform: translateY($args);
+  -ms-transform: translateY($args);
+  -o-transform: translateY($args);
+  transform: translateY($args);
+}
+
+@mixin transform($args...) {
+  -webkit-transform: translate($args);
+  -moz-transform: translate($args);
+  -ms-transform: translate($args);
+  -o-transform: translate($args);
+  transform: translate($args);
+}
+
+@mixin scale($args...) {
+  -webkit-transform: scale($args);
+  -moz-transform: scale($args);
+  -ms-transform: scale($args);
+  transform: scale($args);
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate(#{$deg}deg);
+  -moz-transform: rotate(#{$deg}deg);
+  -ms-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
+}
+
+@mixin arrow($direction, $size, $color) {
+  width: 0;
+  height: 0;
+  @if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  }
+}
+
+@mixin li-dot($width, $height, $bg) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  background: $bg;
+  @include border-radius(50%);
+}
+
+@mixin webkitreset {
+  -webkit-appearance: none;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+@mixin max($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
+@mixin min($point) {
+  @if $point == xs {
+    @media (min-width: 375px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == md-l {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  } @else if $point == xxl {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if $point == max {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+@mixin flexbox {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($grow, $shrink, $basis) {
+  -webkit-box-flex: $grow $shrink $basis;
+  -moz-box-flex: $grow $shrink $basis;
+  -webkit-flex: $grow $shrink $basis;
+  -ms-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+  flex-basis: $basis;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin hover-border($bottom) {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    @include transition(width $speed);
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+@mixin border-after(
+  $width: 40px,
+  $height: 3px,
+  $bg: $color-black,
+  $center: false
+) {
+  &:after {
+    position: relative;
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background: $bg;
+    @if $center {
+      left: 50%;
+      @include transformX(-50%);
+    }
+  }
+}
+
+@mixin icomoon {
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin lhCrop($line-height, $corrector:0.5em) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * #{$corrector});
+  }
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-bottom: calc((1 - #{$line-height}) * #{$corrector});
+  }
+}
+
+@mixin burger($color:#000, $width:20px, $height:3px, $middle:7px, $bottom:14px) {
+  &:after {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background: $color;
+    box-shadow: 0 $middle $color, 0 $bottom $color;
+    position: absolute;
+    left: 50%;
+    @include transform(-50%,-50%);
+  }
+}

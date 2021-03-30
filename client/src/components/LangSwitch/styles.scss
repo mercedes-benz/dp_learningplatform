@@ -1,0 +1,132 @@
+@import "./theme/globals";
+@import "./theme/icons";
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  :local(.Langswitch) {
+    ul {
+      li span {
+        padding-top: 2px;
+      }
+      ul a {
+        padding-top: 11px !important;
+        padding-bottom: 9px !important;
+      }
+    }
+  }
+}
+
+:local(.Langswitch) {
+  @include max(1199px) {
+    display: none;
+  }
+  img {
+    width: 15px;
+    margin-right: 5px;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      @include flexbox;
+      align-items: center;
+    }
+    > li {
+      @include transition(text-shadow $speed);
+      &:hover {
+        text-shadow: 0 0 1px #000;
+        .inner {
+          @include scale(1,1);
+          &:before {
+            top: 3px;
+          }
+        }
+      }
+    }
+    .inner {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 140px;
+      margin-left: -70px;
+      padding-top: 10px;
+      will-change: transform;
+      @include transition(transform $speed);
+      @include scale(0,0);
+      &:before {
+        content: '';
+        display: block;
+        @include arrow(up, 7px, #000);
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        @include transformX(-50%);
+        @include transition(top $speed);
+      }
+    }
+    ul {
+      background: #fff;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      line-height: 1;
+      border-top: 7px solid $color-black;
+      padding-left: 20px;
+      padding-right: 20px;
+      li {
+        // border-bottom: 1px solid $color-border;
+      }
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+      }
+      a {
+        position: relative;
+        color: $color-text;
+        padding: 10px 0;
+        @include font-size(14);
+        display: block;
+        font-weight: $regular;
+        &:hover {
+          font-weight: $heavy;
+        }
+        .logout {
+          padding: 15px 0 5px;
+        }
+      }
+    }
+  }
+  .lang-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    @include transition(transform $speed);
+    background: rgba(0,0,0,.75);
+    @include scale(0,0);
+    z-index: 9999;
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    &.is-active {
+      @include scale(1,1);
+    }
+    .inner {
+      width: 90%;
+      height: auto;
+      padding: 35px;
+      background: #fff;
+      @include flexbox;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include min(sm) {
+        width: 75%;
+      }
+      @include min(lg) {
+        width: 680px;
+      }
+    }
+  }
+}

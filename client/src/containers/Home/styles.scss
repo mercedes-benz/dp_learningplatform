@@ -1,0 +1,585 @@
+@import "./theme/globals";
+
+:local(.Home) {
+  .wp-content {
+    margin-bottom: 15px;
+    > .row {
+      &:first-child {
+        padding: 0;
+      }
+    }
+    .hero {
+      background: none;
+      .hero__wrapper {
+        padding-bottom: 0;
+      }
+      .hero__content {
+        strong {
+          &:first-child {
+            color: $color-secondary;
+          }
+          &:last-child {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+  .inside {
+    position: relative;
+  }
+  .categories-list {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    > .row {
+      justify-content: center;
+    }
+  }
+  .scroll-to {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    margin-left: -45px;
+    width: auto;
+    top: calc(100vh - 400px);
+    animation: 0.7s down infinite alternate;
+    -webkit-animation: 0.7s down infinite alternate;
+    @include transition(color $speed ease-in);
+    @include min(sm) {
+      top: calc(100vh - 450px);
+    }
+    @include min(md) {
+      top: calc(100vh - 100px);
+    }
+  }
+  .latest-articles {
+    position: relative;
+    z-index: 1;
+    .articles-container {
+      padding: 0;
+      @include min(sm) {
+        @include flexbox;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      > .headline {
+        @include flex(0, 1, 100%);
+      }
+    }
+    .carousel {
+      padding: 0;
+    }
+  }
+  .col-sm-12,
+  .col-md-12,
+  .col-lg-12 {
+    .text_column {
+      @include min(sm) {
+        max-width: 66.66%;
+      }
+      @include min(lg) {
+        max-width: 50%;
+      }
+    }
+  }
+  .box-holder {
+    @include flexbox;
+    align-items: stretch;
+    padding-top: 80px;
+    margin-bottom: 50px;
+
+    @include min(md) {
+      padding-top: 90px;
+      margin-bottom: 60px;
+    }
+
+    @include min(lg) {
+      padding-top: 175px;
+    }
+
+    @include min(xl) {
+      margin-bottom: 90px;
+    }
+
+    @include max(767px) {
+      flex-direction: column;
+    }
+
+    .learning-box {
+      @include flexbox;
+      justify-content: flex-end;
+
+      &:before {
+        right: 15px;
+        @include gradient-secondary();
+
+        @include max(767px) {
+          left: 0;
+        }
+      }
+
+      .inner {
+        text-align: right;
+
+        @include max(767px) {
+          text-align: center;
+        }
+      }
+      .content-holder {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @include min(sm) {
+          padding-right: 50px;
+        }
+
+        @include min(lg) {
+          padding-right: 70px;
+        }
+
+        .headline, .description {
+          text-align: inherit;
+        }
+      }
+      .button {
+        padding-right: 0;
+
+        @include min(sm) {
+          padding-right: 50px;
+        }
+
+        @include min(lg) {
+          padding-right: 70px;
+        }
+
+        a {
+          color: $color-secondary;
+        }
+      }
+    }
+    .knowledge-box {
+      @include max(767px) {
+        margin-top: 30px;
+      }
+
+      &:before {
+        left: 15px;
+        @include gradient-primary();
+
+        @include max(767px) {
+          left: 0;
+        }
+      }
+      .inner {
+        text-align: left;
+
+        @include max(767px) {
+          text-align: center;
+        }
+      }
+      .content-holder {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @include min(sm) {
+          padding-left: 50px;
+        }
+
+        @include min(lg) {
+          padding-left: 70px;
+        }
+
+        .headline, .description {
+          text-align: inherit;
+        }
+      }
+      .button {
+        padding-left: 0;
+
+        @include min(sm) {
+          padding-left: 50px;
+        }
+
+        @include min(lg) {
+          padding-left: 70px;
+        }
+
+        a {
+          color: $color-primary;
+        }
+      }
+    }
+    .box {
+      position: relative;
+      @include gutter;
+      @include flex(0,1,100%);
+      @include min(sm) {
+        @include flex(0,1,50%);
+      }
+      &:hover {
+        .button a {
+          opacity: 0.75;
+        }
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+      &:last-child {
+        @include max(767px) {
+          margin-top: 120px;
+        }
+      }
+      .image-holder {
+        margin-top: -80px;
+        margin-bottom: 30px;
+
+        @include min(sm) {
+          margin-top: -60px;
+        }
+
+        @include min(md) {
+          margin-top: -90px;
+        }
+
+        @include min(lg) {
+          margin-top: -175px;
+        }
+        img {
+          max-height: 260px;
+        }
+      }
+      .content-holder {
+        margin-bottom: 15px;
+      }
+    }
+    .inner {
+      position: relative;
+      padding: 0 0 50px;
+      height: 100%;
+      max-width: 550px;
+    }
+    .image-holder {
+      padding: 0 70px;
+
+      @include max(767px) {
+        padding: 0 60px;
+      }
+    }
+    .content-holder {
+    }
+    .headline {
+      color: #fff;
+      @include font-size(50);
+      @include max(1199px) {
+        @include font-size(23);
+      }
+    }
+    .description {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .button {
+      margin-top: 15px;
+    }
+  }
+  .headline-outro {
+    @include font-size(30);
+    line-height: 1.115;
+    @include min(sm) {
+      @include font-size(42);
+      line-height: 1.125;
+    }
+    @include min(lg) {
+    }
+    @include min(xl) {
+      @include font-size(50);
+      line-height: 1.1;
+    }
+    @include max(991px) {
+      margin-bottom: 0;
+    }
+    @include border-after();
+    &:after {
+      margin: 20px auto 0;
+      @include min(md) {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+:local(.Form) {
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  position: relative;
+
+  .input {
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    background: #fff;
+    height: 50px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .submit {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $color-black;
+    text-align: center;
+    line-height: 33px;
+    &:before {
+      @include font-size(16);
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    @include transformY(-50%);
+    display: block;
+    text-align: center;
+    color: $color-black;
+  }
+}
+
+:local(.Category) {
+  margin-top: 15px;
+  @include min(sm) {
+    margin-top: 30px;
+  }
+  &:first-child {
+    margin-top: 0;
+    .col-text,
+    .col-image {
+      @include min(sm) {
+        @include flex(0, 1, 50%);
+      }
+    }
+  }
+  .teaser {
+    position: relative;
+    @include flexbox;
+    @include transition(box-shadow $speed);
+    @include min(sm) {
+      align-items: stretch;
+    }
+    @include max(767px) {
+      flex-direction: column;
+    }
+    &:hover {
+      box-shadow: 0 0 15px 0 rgba(0,0,0,.35);
+      .button a {
+        background: none;
+        border-color: $color-grey-40;
+      }
+    }
+    .teaser-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .col-text {
+      background-color: #fff;
+      @include min(sm) {
+        @include flex(0, 1, 40%);
+        @include flexbox;
+        flex-direction: column;
+      }
+    }
+    .col-image {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include min(sm) {
+        @include flex(0, 1, 60%);
+      }
+      @include max(767px) {
+        order: -1;
+        margin-bottom: 10px;
+      }
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .title {
+      position: relative;
+      padding: 15px 30px;
+      @include gradient-secondary;
+      .headline {
+        margin: 0;
+        color: #fff;
+        line-height: 1;
+        text-align: left;
+        @include flexbox;
+        align-items: center;
+        @include min(lg) {
+          @include font-size(28);
+        }
+        &:before {
+          margin-right: 10px;
+          display: block;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          @include font-size(22);
+          text-align: center;
+          line-height: 35px;
+        }
+      }
+    }
+    .description {
+      padding: 15px;
+      margin: 0;
+      @include min(sm) {
+        padding: 30px;
+      }
+    }
+    .button {
+      padding: 0 15px 15px;
+      @include min(sm) {
+        padding: 0 30px 30px;
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+:local(.LatestArticle) {
+  + :local(.LatestArticle) {
+    @include max(767px) {
+      margin-top: 10px;
+    }
+  }
+  .teaser {
+    height: 100%;
+    background-color: #fff;
+    @include min(sm) {
+      @include flexbox;
+      flex-direction: column;
+    }
+    .image-holder {
+      height: 65px;
+      min-height: 65px;
+      background: url("../../assets/bg/placeholder-cyan.png") no-repeat 0 0
+        $color-primary;
+      background-size: cover;
+    }
+    figure {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      height: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      img {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .title {
+      position: relative;
+      padding: 6px 15px;
+      color: #fff;
+      text-align: center;
+      @include gradient-secondary;
+      @include font-size(22);
+      @include font($headline);
+      @include min(lg) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .level {
+        display: block;
+        width: 24px;
+        height: 24px;
+        @include font-size(14);
+        color: #fff;
+        text-align: center;
+        line-height: 24px;
+        border-radius: 3px;
+        background: $color-primary;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        @include transformY(-50%);
+        @include min(lg) {
+          right: 30px;
+        }
+      }
+    }
+    .headline {
+      text-align: center;
+      margin: 0;
+      text-transform: none;
+      padding: 20px;
+      @include min(sm) {
+        padding: 25px;
+      }
+      @include min(lg) {
+        padding: 30px;
+      }
+    }
+    .button {
+      text-align: center;
+      padding: 0 20px 20px;
+      @include min(sm) {
+        padding: 0 25px 25px;
+      }
+      @include min(lg) {
+        padding: 0 30px 30px;
+        margin-top: auto;
+      }
+      @include max(767px) {
+        display: block;
+      }
+    }
+  }
+}
+
+:local(.Error) {
+  background-color: #d00;
+  color: #fff;
+  padding: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+  }
+}

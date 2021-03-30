@@ -1,0 +1,48 @@
+<wpml-config>
+  <!-- custom post types -->
+  <custom-types>
+    <custom-type translate="1">knowledge</custom-type>
+    <custom-type translate="1">learning</custom-type>
+    <custom-type translate="1">faq</custom-type>
+    <custom-type translate="1">quiz</custom-type>
+    <custom-type translate="1">video</custom-type>
+  </custom-types>
+  <!-- taxonomies -->
+  <taxonomies>
+    <taxonomy translate="1">knowledge_category</taxonomy>
+    <taxonomy translate="1">learning_topic</taxonomy>
+    <taxonomy translate="1">faq_category</taxonomy>
+  </taxonomies>
+  <!-- custom meta -->
+  <custom-fields>
+    <custom-field action="translate">order</custom-field>
+    <custom-field action="copy-once">reading_time</custom-field>
+    <custom-field action="copy">button</custom-field>
+    <custom-field action="copy">button_display_button</custom-field>
+    <custom-field action="translate">button_link</custom-field>
+    <custom-field action="copy">button_target</custom-field>
+    <custom-field action="translate">button_text</custom-field>
+    <custom-field action="translate">linked_knowledge_articles</custom-field>
+    <custom-field action="translate">linked_learning_articles</custom-field>
+    <custom-field action="ignore">views</custom-field>
+    <custom-field action="copy">auth_required</custom-field>
+    <custom-field action="ignore">tag</custom-field>
+    <custom-field action="ignore">learning_tag</custom-field>
+    <custom-field action="translate">preview_description</custom-field>
+    <custom-field action="copy-once">preview_image</custom-field>
+    <custom-field action="translate">preview_title</custom-field>
+    <custom-field action="copy">sub</custom-field>
+    <custom-field action="copy-once">questions</custom-field>
+    <custom-field action="copy-once">article_type</custom-field>
+    <custom-field action="translate">quiz_id</custom-field>
+    <custom-field action="translate">video_id</custom-field>
+    <custom-field action="translate">video_file</custom-field>
+  </custom-fields>
+  <!-- options -->
+  <admin-texts>
+    <key name="dps_options">
+      <key name="knowledge_tags" />
+      <key name="learning_tags" />
+    </key>
+  </admin-texts>
+</wpml-config>

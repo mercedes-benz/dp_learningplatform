@@ -1,0 +1,230 @@
+@import "./theme/globals";
+@import "./theme/icons";
+
+:local(.Button),
+.button {
+  &.button--inline {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &.button--small {
+    a,
+    button {
+      // padding: 6px 7px 7px 8px;
+      padding: 10px 15px;
+      @include font-size(14);
+      i {
+        top: 0;
+        // margin-left: 7px;
+        margin-left: 10px;
+        &:before {
+          @include font-size(10);
+        }
+      }
+    }
+  }
+  &.button--medium {
+    a,
+    button {
+      padding: 10px 15px;
+    }
+  }
+  &.button--large {
+    a,
+    button {
+      padding: 10px 15px;
+    }
+  }
+
+  a,
+  button {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    @include font($headline);
+    @include font-size(16);
+    @include transition(opacity $speed);
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  i {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    display: inline-block;
+    &:before {
+      @include icomoon;
+      @include font-size(12);
+    }
+    &.icon--none {
+      display: none;
+    }
+    &.icon-default,
+    &.icon--default {
+      &:before {
+        content: $icon-arrow-right;
+      }
+    }
+    &.icon-default-small,
+    &.icon--default-small {
+      &:before {
+        content: $icon-arrow-right;
+      }
+    }
+    &.icon-link,
+    &.icon--link {
+      &:before {
+        content: $icon-hyperlink;
+      }
+    }
+    &.icon-download,
+    &.icon--download {
+      &:before {
+        content: $icon-download;
+      }
+    }
+    &.icon-phone,
+    &.icon--phone {
+      &:before {
+        content: $icon-phone-circle;
+      }
+    }
+    &.icon-mail,
+    &.icon--mail {
+      &:before {
+        content: $icon-mail-circle;
+      }
+    }
+    &.icon-heart,
+    &.icon--heart {
+      &:before {
+        content: $icon-heart;
+      }
+    }
+    &.icon-clock,
+    &.icon--clock {
+      &:before {
+        content: $icon-clock;
+      }
+    }
+    &.icon-comments,
+    &.icon--comments {
+      &:before {
+        content: $icon-comment-blank;
+      }
+    }
+  }
+
+  &.button--white {
+    a,
+    button {
+      color: $color-text;
+      background: #fff;
+      // @include transition(background $speed, border-color $speed, color $speed);
+      &:hover {
+        // color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+  &.button--light {
+    a,
+    button {
+      color: $color-text;
+      background: $color-grey-40;
+      // @include transition(background $speed, border-color $speed);
+      // &:hover {
+      //   border-color: $color-grey-40;
+      // }
+    }
+  }
+  &.button--dark {
+    a,
+    button {
+      color: #fff;
+      background: $color-black;
+      @include transition(background $speed);
+      // &:hover {
+      //   background: rgba(0,0,0,.8);
+      // }
+    }
+  }
+  &.button--cyan {
+    a,
+    button {
+      color: #fff;
+      z-index: 1;
+      background: #54e2db;
+      &:before {
+        content: "";
+        display: block;
+        width: calc(100% - 1px);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // border-radius: $radius;
+        @include gradient-primary();
+        @include transition(opacity $speed);
+        z-index: -1;
+      }
+      // &:hover {
+      //   &:before {
+      //     opacity: 0;
+      //   }
+      // }
+    }
+  }
+  &.button--purple {
+    a,
+    button {
+      color: #fff;
+      z-index: 1;
+      background: #8c62d8;
+      &:before {
+        content: "";
+        display: block;
+        width: calc(100% - 1px);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include gradient-secondary();
+        @include transition(opacity $speed);
+        z-index: -1;
+      }
+      // &:hover {
+      //   &:before {
+      //     opacity: 0;
+      //   }
+      // }
+    }
+  }
+
+  &.button--back {
+    i {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+
+  // alignment
+  &.button--right {
+    text-align: right;
+  }
+  &.button--center {
+    text-align: center;
+  }
+}
+
+.button + .button {
+  margin-left: 15px;
+}

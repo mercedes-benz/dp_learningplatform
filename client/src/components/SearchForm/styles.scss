@@ -1,0 +1,27 @@
+@import "./theme/globals";
+
+:local(.search_form) {
+  margin-left: auto;
+  form {
+    position: relative;
+  }
+  input {
+    width: 0;
+    padding-right: 60px;
+    @include min(lg) {
+      width: 270px;
+    }
+  }
+  button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    @include transformY(-50%);
+    display: block;
+    text-align: center;
+    color: $color-text;
+    &:before {
+      @include font-size(22);
+    }
+  }
+}
