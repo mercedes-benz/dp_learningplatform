@@ -1,3 +1,5 @@
+# :warning: This project is no longer maintained and is archived. :warning:
+
 # Daimler Protics Learningplatform
 
 ![Learningplatform](./docs/index.png)
